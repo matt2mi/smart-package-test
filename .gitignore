@@ -1,0 +1,17 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.iml
+.idea/
+target/
+.DS_Store
+
+
+smart-package-test-front/node_modules
+smart-package-test-front/dist
+
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
