@@ -1,1 +1,43 @@
-<h1>{{title}}</h1>
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">HotelManagement</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="row hotel" *ngFor="let hotel of hotels">
+        <div class="col-3"></div>
+        <div class="card col" style="width: 20rem;">
+            <img class="card-img-top main-image" src="assets/image/hotels/{{hotel?.id}}/main/1.jpg" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">{{hotel?.nomCommercial}}</h4>
+                <h6 class="card-subtitle mb-2 text-muted">
+                    <p>
+                        {{hotel?.adresse}} {{hotel?.codePostal}} {{hotel?.commune}}
+                    </p>
+                    <p>
+                        {{hotel?.telephone}}
+                    </p>
+                </h6>
+                <div class="card-text" *ngIf="hotel?.nbChambresRest >= 1">
+                    Nombre de chambres disponnibles :
+                    <span class="badge badge-success" *ngIf="hotel?.nbChambresRest >= 6">{{hotel?.nbChambresRest}}</span>
+                    <span class="badge badge-warning" *ngIf="hotel?.nbChambresRest >= 3 && hotel?.nbChambresRest < 6">{{hotel?.nbChambresRest}}</span>
+                    <span class="badge badge-danger" *ngIf="hotel?.nbChambresRest < 3">{{hotel?.nbChambresRest}}</span>
+                </div>
+                <div class="badge badge-default" *ngIf="hotel?.nbChambresRest < 1">Plus de places disponibles</div>
+            </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
