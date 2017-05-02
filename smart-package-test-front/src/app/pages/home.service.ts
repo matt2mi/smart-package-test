@@ -15,7 +15,7 @@ export class HotelService {
      * @returns {Observable<R>}
      */
     fetch(): Observable<any> {
-        return this._http.get('http://localhost:8080/api/hotel')
+        return this._http.get('/api/hotel')
             .map((res: Response) => {
                 if (res.status === 200) {
                     return res.json();
