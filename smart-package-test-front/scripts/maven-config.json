@@ -1,0 +1,22 @@
+{
+   "groupId": "com.bouhanef.smart-package",
+   "artifactId": "{name}",
+   "buildDir": "dist-jar",
+   "finalName": "{name}-{version}",
+   "type": "jar",
+   "snapshot": "false",
+   "fileEncoding": "utf-8",
+   "repositories": [
+      {
+         "id": "bouhanef-repository-release",
+         "name": "Bouhanef Nexus Repository Release",
+         "url": "http://maven.bouhanef.com/content/repositories/releases"
+      },
+      {
+         "id": "example-repository-snapshot",
+         "name": "Bouhanef Nexus Repository Snapshot",
+         "url": "http://maven.bouhanef.com/content/repositories/snapshots"
+      }
+   ]
+}
+
