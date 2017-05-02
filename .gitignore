@@ -11,6 +11,7 @@ target/
 
 smart-package-test-front/node_modules
 smart-package-test-front/dist
+smart-package-test-front/dist-jar
 
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
